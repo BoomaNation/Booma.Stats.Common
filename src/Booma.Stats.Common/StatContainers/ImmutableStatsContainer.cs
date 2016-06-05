@@ -33,6 +33,7 @@ namespace Booma.Stats.Common
 
 		//Not really how I wanted to compute the value/store the value... But it's the most efficient and thread safe way.
 		//This value represents the maximum key value that the enum contains. This can help create a properly sized array for the container
+		//TODO: Do this in a better way
 		protected static readonly int maxMapKeyValue = IStatsContainerExtensions.GetMaxMapKeyValue<TStatType>();
 
 		//for better caching we don't use a dictionary; use a flat array.
